@@ -1,5 +1,5 @@
 
-# Speech boxes in pygame
+# Speech bubbles in pygame
 
 These scripts demonstrate how to implement speech boxes for sprites in pygame.
 
