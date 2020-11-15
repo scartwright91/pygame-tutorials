@@ -28,6 +28,10 @@ while True:
         timer = pg.time.get_ticks()
         projectiles.append(
             # add projectile here
+            BasicProjectile([0, 500], axis = "x")
+        )
+        projectiles.append(
+            # add projectile here
             LinearProjectile([500, 500], mouse_pos)
         )
 

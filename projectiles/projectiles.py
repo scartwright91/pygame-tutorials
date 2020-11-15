@@ -26,9 +26,8 @@ class LinearProjectile:
     def __init__(self, pos, target_pos):
         self.pos = pos
         self.x_delta = (target_pos[0] - pos[0])
-        self.y_delta = -(target_pos[1] - pos[1])
+        self.y_delta = (target_pos[1] - pos[1])
         self.theta = math.atan2(self.y_delta, self.x_delta)
-        print(180*self.theta/math.pi)
         self.speed = 5
 
     def update(self):
@@ -37,8 +36,8 @@ class LinearProjectile:
         h = self.speed
 
         # Calculate incremental changes x and y
-        x_increment = h * math.sin(self.theta)
-        y_increment = h * math.cos(self.theta)
+        x_increment = h * math.cos(self.theta)
+        y_increment = h * math.sin(self.theta)
 
         # update projectile's position
         self.pos[0] += x_increment
