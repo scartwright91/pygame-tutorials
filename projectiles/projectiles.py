@@ -27,8 +27,8 @@ class LinearProjectile:
         self.pos = pos
         self.x_delta = (target_pos[0] - pos[0])
         self.y_delta = (target_pos[1] - pos[1])
-        self.theta = math.atan2(self.y_delta, self.x_delta)
-        self.speed = 5
+        self.theta = math.atan2(-self.y_delta, self.x_delta)
+        self.speed = 10
 
     def update(self):
 
@@ -41,7 +41,7 @@ class LinearProjectile:
 
         # update projectile's position
         self.pos[0] += x_increment
-        self.pos[1] += y_increment
+        self.pos[1] -= y_increment
 
     def draw(self, screen):
         pg.draw.circle(screen, (255, 255, 0), self.pos, radius = 20)
