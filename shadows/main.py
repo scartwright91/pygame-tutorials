@@ -21,7 +21,7 @@ king_mask = [(x + 600, y + 386) for x, y in king_mask]
 
 sun_pos = pg.Vector2(0, 0)
 target_pos = pg.Vector2(600, 400)
-sun_angle = math.atan2((sun_pos.y - target_pos.y), (sun_pos.x - target_pos.x))
+sun_angle = math.atan2((sun_pos.x - target_pos.x), (sun_pos.y - target_pos.y))
 
 shadows = []
 
